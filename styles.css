@@ -1,0 +1,223 @@
+/* Font Definitions */
+@font-face {
+    font-family: Metropolis;
+    src: url(/resources/fonts/Metropolis-Regular.otf);
+}
+
+@font-face {
+    font-family: Mono45Headline-Bold;
+    src: url(/resources/fonts/Mono45Headline-Bold.ttf);
+}
+
+
+/* Variable Declarations */
+:root {
+    --col-blblue: #005EB8;
+    --col-blhliteblue: #0084ff;
+    --col-blwhite: #DADEE6;
+    --col-blgrey: #2C2C2C;
+    --col-bldgrey: #242424;
+}
+
+/* Standard Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Standard Preferences */
+html {
+    color-scheme: dark light; /* sets themes based on browser */
+}
+
+body {
+    font-family: 'Metropolis';
+    font-size: 2.5rem;
+    background: var(--col-blgrey);
+    color: #DADEE6;
+}
+
+section {
+    padding-block: 3rem;
+}
+
+/* Logos */
+header {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    background-color: var(--col-bldgrey);
+}
+
+header img {
+    width: 80%;
+    padding: 2rem;
+}
+
+/* SWrap (or section) */
+.swrap {
+    padding-block: 1rem;
+    width: 50%;
+    margin-inline: auto;
+    line-height: 1.5;
+}
+
+.swrap h2 {
+    padding-block: 1rem;
+    font-size: 3rem;
+    color: var(--col-blblue);
+}
+
+.swrap p {
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+}
+
+/* Diagonal Sections */
+.diagonal {
+    isolation: isolate;
+    position: relative;
+}
+
+.diagonal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgb(0, 60, 116) 0%, rgb(0,94,184,1) 100%);
+    transform: skewY(-5deg);
+    z-index: -1;
+}
+
+.diagonal .swrap h2 {
+    color: var(--col-blwhite);
+}
+
+/* Carousel */
+.carousel {
+    background-color: var(--col-bldgrey);
+    padding-block: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel-slide {
+    display: inline-block;    
+    animation: carousel-move 40s infinite linear;
+}
+
+.carousel-slide img {
+    color: var(--col-blblue);
+    padding: 0;
+    margin: 0;
+    height: 15rem;
+    padding-inline: 5rem;
+}
+
+@keyframes carousel-move {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Moving Into View */
+.hid-scroll {
+    transition: 1s;
+    transform: translateX(-25%);
+    opacity: 0;    
+}
+
+.show-scroll {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+/* Links */
+.swrap a {
+    color: var(--col-blblue);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: 0.25s;
+}
+
+.swrap a:hover {
+    color: var(--col-blhliteblue);
+}
+
+.swrap a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0.5rem;
+    left: 0;
+    background-color: var(--col-blblue);
+    transform-origin: bottom right;
+    transition: all 0.25s;
+    transition: transform 0.25s ease-out;    
+    border-radius: 1px;
+}
+
+.swrap a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: var(--col-blhliteblue);
+}
+
+/* Legal Footer */
+footer {
+    text-align: center ;
+}
+
+footer .swrap p {
+    font-size: 1rem;
+}
+
+footer .swrap a::after {
+    bottom: 0.1rem;
+}
+
+
+
+
+
+
+
+
+/* Scaling - MUST REMAIN AT BOTTOM OF CASCADE */
+@media only screen and (max-width: 800px) {
+    .swrap {
+        width: 75%;
+    }
+
+    .swrap h1 {
+        font-size: 3rem;
+    }
+    
+    .swrap h2 {
+        font-size: 2rem;
+    }
+    
+    .swrap p {
+        padding: 1rem 1rem;
+        font-size: 1.3rem;
+    }
+
+    .carousel-slide img {
+        height: 10rem;
+    }
+
+    .swrap a::after {
+        bottom: 0.2rem;
+    }
+
+    header img {
+        width: 95%;
+        padding: 2rem;
+    }
+}
