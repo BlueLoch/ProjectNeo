@@ -75,22 +75,30 @@ header img {
 }
 
 /* Diagonal Sections */
-.diagonal {
+.diagonal, .diagonal-inverse {
     isolation: isolate;
     position: relative;
 }
 
-.diagonal::after {
+.diagonal::after, .diagonal-inverse::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, rgb(0, 60, 116) 0%, rgb(0,94,184,1) 100%);
-    transform: skewY(-5deg);
+    
     z-index: -1;
 }
 
-.diagonal .swrap h2 {
+.diagonal .swrap h2, .diagonal-inverse .swrap h2 {
     color: var(--col-blwhite);
+}
+
+.diagonal::after {
+    transform: skewY(-5deg);
+}
+
+.diagonal-inverse::after {
+    transform: skewY(5deg);
 }
 
 /* Carousel */
