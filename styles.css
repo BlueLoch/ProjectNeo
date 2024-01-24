@@ -133,7 +133,7 @@ header img {
 
 /* Moving Into View */
 .hid-scroll {
-    transition: 1s;
+    transition: 1s;    
     transform: translateX(-25%);
     opacity: 0;    
 }
@@ -190,8 +190,36 @@ footer .swrap a::after {
     bottom: 0.1rem;
 }
 
+/* Nav Menu */
+nav {
+    position: fixed;
+    z-index: 100;
+    top: 5%;
+    left: -15rem;
+}
 
+nav a {
+    text-decoration: none;
+    color: var(--col-blgrey);
+    display: block;
+    padding: 1rem;
+    padding-right: 10rem;
+    margin-top: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    transition: 0.2s;
+}
 
+nav a:hover {
+    transform: translateX(15rem);
+}
+
+#home {
+    background-color: gold;
+}
+
+#about {
+    background-color: purple;
+}
 
 
 
