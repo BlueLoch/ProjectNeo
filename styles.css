@@ -45,6 +45,7 @@ section {
 /* Logos */
 header {
     margin: auto;
+    top: 50%;
     text-align: center;
     width: 100%;
     background-color: var(--col-bldgrey);
@@ -191,36 +192,92 @@ footer .swrap a::after {
 }
 
 /* Nav Menu */
-nav {
+.sidebar {
     position: fixed;
+    width: 20rem;
+    top: 5rem;
+    background-color: var(--col-bldgrey);
     z-index: 100;
-    top: 5%;
+    transition: 0.3s;
     left: -15rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--col-blgrey);
-    display: block;
-    padding: 1rem;
-    padding-right: 10rem;
-    margin-top: 1rem;
+    padding-block: 2rem;
     border-radius: 0 1rem 1rem 0;
-    transition: 0.2s;
+    border: var(--col-blhliteblue) solid 1px;
+    border-left: none;
 }
 
-nav a:hover {
-    transform: translateX(15rem);
+.sidebar a {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--col-blwhite);
+    width: 100%;
+    transition: 0.3s;
 }
 
-#home {
-    background-color: gold;
+.sidebar-link-title, .sidebar-link-icon {
+    display: inline;
 }
 
-#about {
-    background-color: purple;
+.sidebar-link-icon:has(img) {
+    right: 1.3rem;
+    position: absolute;
 }
 
+.sidebar-link-icon img {
+    width: 2.5rem;
+}
+
+.sidebar:hover {
+    left: 0;
+}
+
+.sidebar a:hover {
+    background-color: var(--col-blblue);
+}
+
+/* Text reveal */
+.torev1, .torev2 {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.torev2 span {
+    margin-left: 1rem;
+}
+
+.reveal-initvis {
+    animation: reveal-showup 2s;
+}
+
+.reveal-invis {
+    width:fit-content;
+    animation: reveal-reveal 7s;
+}
+
+.reveal-invis span {
+    animation: reveal-slidein 3s;
+    margin-left: 1rem;
+}
+
+@keyframes reveal-showup {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes reveal-slidein {
+    0% { margin-left:-800px; }
+    50% { margin-left:-800px; }
+    80% { margin-left:1rem; }
+}
+
+@keyframes reveal-reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:fit-content;}
+    80% {opacity:1;}
+}
 
 
 
@@ -244,8 +301,12 @@ nav a:hover {
         font-size: 1.3rem;
     }
 
+    .carousel {
+        padding-block: 2rem;
+    }
+
     .carousel-slide img {
-        height: 10rem;
+        height: 8rem;
     }
 
     .swrap a::after {
@@ -253,7 +314,21 @@ nav a:hover {
     }
 
     header img {
-        width: 95%;
-        padding: 2rem;
+        width: 100%;
+        padding: 1rem 2rem 0rem 2rem;
+    }
+
+    .sidebar {
+        left: -17.5rem;
+        padding-block: 1rem;
+
+    }
+
+    .sidebar-link-icon:has(img) {
+        right: 0.5rem;
+    }
+    
+    .sidebar-link-icon img {
+        width: 1.5rem;
     }
 }
