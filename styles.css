@@ -36,12 +36,14 @@ html {
         conic-gradient(from -63.44deg at calc(200%/3) 100%, var(--gradient)) #2A2A2A;
     background-size: 8rem 8rem;
     background-attachment: fixed;
+    height: 100vh;
 }
 
 body {
     font-family: 'Metropolis', 'Trebuchet MS';
     font-size: 2.5rem;
     color: #DADEE6;
+    height: 100vh;
 }
 
 section {
