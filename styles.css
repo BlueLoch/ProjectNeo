@@ -113,7 +113,7 @@ header h1 {
 
 .swrap ol,
 .swrap ul {
-    padding: 0 3.5rem;
+    padding: 0 6rem;
 }
 
 .swrap li {
@@ -376,10 +376,22 @@ footer .swrap a::after {
     }
 }
 
+/* Support OS Selectors */
+.os-wrapper {
+    text-align: center;
+}
 
+.os-wrapper button {
+    margin-inline: 1rem;
+}
 
+.os-support-i {
+    display: none;
+}
 
-
+.os-support-a {
+    display: block;
+}
 
 
 
@@ -416,7 +428,7 @@ footer .swrap a::after {
 
     .swrap ol,
     .swrap ul {
-        padding: 0 1.5rem;
+        padding: 0 3rem;
     }
 
     .swrap button {
