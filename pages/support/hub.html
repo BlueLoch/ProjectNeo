@@ -29,7 +29,13 @@
     <script defer src="/script.js"></script>
     <script>
         function setSelectedOS(os) {
-
+            document.getElementById("os-section").classList.remove("os-support");
+            let osinfos = document.getElementsByClassName("os-support");
+            for (let i = 0; i < osinfos.length; i++) {
+                osinfos[i].classList.remove("os-support-a");
+            }
+            
+            document.getElementById(os).classList.add("os-support-a");
         }
     </script>
 </head>
@@ -102,17 +108,17 @@
         </div>
     </section>
 
-    <section>
+    <section id="os-section" class="os-support">
         <div class="swrap neumorph">
-            <div class="os-support-i" id="winmac">
+            <div class="os-support" id="winmac">
                 <h2>Windows / macOS®</h2>
             </div>
 
-            <div class="os-support-a" id="android">
+            <div class="os-support" id="android">
                 <h2>Android™</h2>
             </div>
 
-            <div class="os-support-i" id="ios">
+            <div class="os-support" id="ios">
                 <h2>iOS / iPadOS®</h2>
             </div>
         </div>
