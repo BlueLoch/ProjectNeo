@@ -15,12 +15,12 @@
     --col-blblue: #005EB8;
     --col-blbluealt: #0084ff;
     --col-blblues: #0077e7;
+    --col-blbluec: #004a8f;
+    --col-blbluea: #00386d;
     --col-text: #dadee6;
     --col-bodyback: #242424;
-    --col-bodybackd: #1a1a1a;
+    --col-bodybackd: #141414;
     --col-bodybacks: #202020;
-    --col-bodypat1: #272727;
-    --col-bodypat2: #252525;
 }
 
 /* Standard Resets */
@@ -39,7 +39,7 @@ html {
 .darkmode {
     --col-text: #242424;
     --col-bodyback: #DADEE6;
-    --col-bodybackd: #c5cace;
+    --col-bodybackd: #b9bec2;
     --col-bodybacks: #d0d4db;
 }
 
@@ -48,32 +48,11 @@ body {
     font-size: 2.5rem;
     color: var(--col-text);
     height: 100vh;
-    transition: 0.2s;
+    transition: 0.5s ease;
+    background-image: radial-gradient(var(--col-bodybackd) 2px, transparent 2px), radial-gradient(var(--col-bodybackd) 2px, transparent 2px);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
     background-color: var(--col-bodyback);
-
-    --sz: 10px;
-    /*** size ***/
-    --c0: var(--col-text);
-    --c1: var(--col-blbluealt);
-    --c2: var(--col-blblues);
-    --c3: var(--col-blblue);
-    --ts: 50%/ calc(var(--sz) * 12.8) calc(var(--sz) * 22);
-    
-    /*background:
-        conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from 120deg at 50% 74%, var(--c0) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from 60deg at 60% 50%, var(--c1) 0 60deg, var(--c2) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from 180deg at 40% 50%, var(--c3) 0 60deg, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
-        conic-gradient(from -60deg at 50% 41%, var(--c2) 0 60deg, var(--c3) 0 120deg, #fff0 0 360deg) var(--ts),
-        var(--c0);
-    background-attachment: fixed;*/
 }
 
 
@@ -84,6 +63,13 @@ p {
     line-height: 2rem;
 }
 
+h1 {
+    color: var(--col-blblue);
+    margin: auto;
+    padding: none;
+    width: fit-content;
+}
+
 /* Nav Menu */
 .sidebar {
     position: fixed;
@@ -91,10 +77,10 @@ p {
     top: 5rem;
     background-color: var(--col-bodybackd);
     z-index: 100;
-    transition: 0.3s;
+    transition: all 0.3s, background-color 0.3s ease;
     left: -15rem;
     padding-block: 2rem;
-    clip-path: polygon(0 0,calc(100% - 40.00px) 0,100% 40.00px,100% calc(100% - 40.00px),calc(100% - 40.00px) 100%,0 100%);
+    clip-path: polygon(0 0, calc(100% - 40.00px) 0, 100% 40.00px, 100% calc(100% - 40.00px), calc(100% - 40.00px) 100%, 0 100%);
 }
 
 .sidebar a {
@@ -160,19 +146,20 @@ p {
 .ham-label .menu {
     position: fixed;
     left: -50px;
-    top: 3rem;
+    top: 6rem;
     z-index: 100;
     width: 100px;
-    height: 100px;
+    height: 70px;
     background: var(--col-bodybackd);
     transition: .3s ease-in-out;
     box-shadow: 0 0 0 0 var(--col-bodybacks), 0 0 0 0 var(--col-bodybacks);
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .ham-label .hamburger {
     position: absolute;
-    top: 47px;
+    top: 33px;
     left: 64px;
     width: 20px;
     height: 2px;
@@ -212,6 +199,7 @@ p {
     border-radius: 0;
     background-color: var(--col-bodybacks);
     left: -20px;
+    top: 4rem;
 }
 
 .ham-label input:checked+.menu .hamburger {
@@ -302,22 +290,43 @@ header {
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
-
+    transition: background-color 0.5s ease;
 }
 
 .header-content {
     width: 100%;
     height: 100%;
-    padding: 3rem;
-    padding-bottom: 5rem;
+    padding: 4rem;
+    padding-bottom: 7rem;
     text-shadow: 1px 1px 1px #333;
     background-color: var(--col-bodybacks);
+    transition: background-color 0.5s ease;
 }
 
 header img {
     margin: auto;
-    max-height: 15rem;
+    max-height: 16rem;
     max-width: 100%;
+    animation: fade-in-logo 2s ease-in-out;
+    transition: clip-path 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@keyframes fade-in-logo {
+    0% {
+        opacity: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
+    }
+
+    20% {
+        opacity: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
+    }
+
+    60% {
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
+    }
 }
 
 header p {
@@ -343,8 +352,8 @@ footer {
 }
 
 footer p {
-    font-size: 0.9rem;
-    line-height: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
 
@@ -412,16 +421,16 @@ button {
     color: #DADEE6;
     position: relative;
     background-color: var(--col-blblue);
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
+    clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
 button:hover {
-    background: #00509b;
-
+    background: var(--col-blbluea);
 }
 
 button:active {
-    transform: scale(0.95);
+    background: var(--col-blbluec);
 }
 
 button::after {
@@ -437,13 +446,14 @@ button::after {
     width: 90%;
     text-align: center;
     margin: auto;
-    margin-top: -3rem;
+    margin-top: -3.8rem;
     display: flex;
     position: relative;
     flex-wrap: wrap;
     background-color: var(--col-bodybacks);
     padding-inline: 3rem;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 80.00px), calc(100% - 80.00px) 100%, 80.00px 100%, 0 calc(100% - 80.00px));
+    transition: background-color 0.5s ease;
 }
 
 .service {
@@ -454,30 +464,33 @@ button::after {
     flex-basis: 1;
     color: var(--col-text);
     min-width: 20rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .service:nth-child(1) {
-    background-color: #708eaa;
+    background-color: #5f83a7;
+    clip-path: polygon(0 60.00px, 60.00px 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .service:nth-child(2) {
-    background-color: #5892ad;
+    background-color: #5386b6;
 }
 
 .service:nth-child(3) {
-    background-color: #497baa;
+    background-color: #5a8fc0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60.00px), calc(100% - 60.00px) 100%, 0 100%);
 }
 
 body:not(.darkmode) .service:nth-child(1) {
-    background-color: #46596b;
+    background-color: #364553;
 }
 
 body:not(.darkmode) .service:nth-child(2) {
-    background-color: #426e83;
+    background-color: #315261;
 }
 
 body:not(.darkmode) .service:nth-child(3) {
-    background-color: #3d678d;
+    background-color: #2d4b68;
 }
 
 .service:nth-child(4) {
@@ -491,21 +504,29 @@ body:not(.darkmode) .service:nth-child(3) {
     padding: 2rem;
 }
 
+.service:nth-child(5) button {
+    margin: 1rem;
+    width: 15rem;
+}
+
 .service hr {
     width: 80%;
     margin-inline: auto;
     margin-block: 1rem;
     border-color: var(--col-text);
+    transition: border-color 0.5s ease
 }
 
 .service h3 {
     font-size: 2rem;
     display: inline;
     white-space: nowrap;
+    animation: fadein-text 2s;
 }
 
 .service p {
     font-size: 1.3rem;
+    animation: fadein-text-del 3s ease-in-out;
 }
 
 .service img {
@@ -513,10 +534,27 @@ body:not(.darkmode) .service:nth-child(3) {
     display: inline;
     transform: translateY(0.4rem);
     margin-right: 0.5rem;
+    transition: filter 0.5s ease
 }
 
 body:not(.darkmode) .service img {
     filter: brightness(6);
+}
+
+@keyframes fadein-text {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein-text-del {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Content Section */
@@ -527,8 +565,9 @@ body:not(.darkmode) .service img {
     width: 75%;
     padding-block: 3rem;
     padding-inline: 5rem;
+    transition: background-color 0.5s ease;
     background-color: var(--col-bodybacks);
-    clip-path: polygon(0 40.00px,40.00px 0,calc(100% - 40.00px) 0,100% 40.00px,100% calc(100% - 40.00px),calc(100% - 40.00px) 100%,40.00px 100%,0 calc(100% - 40.00px));
+    clip-path: polygon(0 40.00px, 40.00px 0, calc(100% - 40.00px) 0, 100% 40.00px, 100% calc(100% - 40.00px), calc(100% - 40.00px) 100%, 40.00px 100%, 0 calc(100% - 40.00px));
 }
 
 .swrap p {
@@ -542,49 +581,35 @@ body:not(.darkmode) .service img {
 }
 
 /* Links */
-
 .swrap a,
 footer a {
+    position: relative;
+    transition: color 0.3s ease-in-out;
     color: var(--col-blblue);
     text-decoration: none;
-    display: inline-block;
-    position: relative;
-    transition: 0.25s;
+}
+
+.swrap a::before,
+footer a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--col-blbluea);
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
 }
 
 .swrap a:hover,
 footer a:hover {
-    color: var(--col-blbluealt);
+    color: var(--col-blbluea);
 }
 
-.swrap a::after,
-footer a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0.3rem;
-    left: 0;
-    background-color: var(--col-blblue);
-    transform-origin: bottom right;
-    transition: all 0.25s;
-    transition: transform 0.25s ease-out;
-    border-radius: 1px;
-}
-
-footer a::after {
-    bottom: -1px;
-    height: 2px;
-}
-
-.swrap a:hover::after,
-footer a:hover::after {
+.swrap a:hover::before,
+footer a:hover::before  {
     transform: scaleX(1);
-    transform-origin: bottom left;
-    background-color: var(--col-blbluealt);
 }
-
 
 /* Horizontal Display */
 .horizontal {
@@ -610,27 +635,52 @@ footer a:hover::after {
     position: relative;
     max-width: 20rem;
     background-color: var(--backgroundsecondary);
+    clip-path: polygon(0 40.00px, 40.00px 0, calc(100% - 40.00px) 0, 100% 40.00px, 100% calc(100% - 40.00px), calc(100% - 40.00px) 100%, 40.00px 100%, 0 calc(100% - 40.00px));
 }
 
-.horizontal-text p {
+.horizontal-text p,
+.horizontal-text h2 {
     text-align: left;
+}
+
+.horizontal-text h2 {
+    margin-bottom: 0.5rem;
 }
 
 .horizontal-text button {
     font-size: 1.4rem;
 }
 
-#nessie:hover {
-    animation: bouncy-nessie 1s infinite ease-in-out;
+footer .horizontal-text {
+    max-width: 20rem;
+}
+
+footer .horizontal-text p {
+    text-align: center;
+}
+
+
+/* Nessie */
+#nessie {
+    animation: bouncy-nessie 3s ease-in-out infinite;
 }
 
 @keyframes bouncy-nessie {
+
+    40%,
+    60% {
+        transform: translateY(0) rotate(0deg);
+    }
+
     50% {
-        transform: translateY(-2rem);
+        transform: translateY(-1.8rem) rotate(3deg);
     }
 }
 
-
+/* Portrait Collage on Index */
+#portrait-collage {
+    max-width: 25rem;
+}
 
 
 
@@ -689,6 +739,11 @@ footer a:hover::after {
 
     .service {
         min-width: none;
+        padding: 2rem;
+    }
+
+    .service:nth-child(1), .service:nth-child(3) {
+        clip-path: none;
     }
 
     .service:nth-child(5) {
@@ -702,5 +757,9 @@ footer a:hover::after {
 
     .horizontal img {
         max-width: 70%;
+    }
+
+    #portrait-collage {
+        max-width: 80%;
     }
 }

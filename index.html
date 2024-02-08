@@ -25,7 +25,7 @@
     <!-- Resource Links -->
     <link rel="icon" href="/resources/img/logos/Nessy-blue.png" />
     <link rel="stylesheet" href="/styles.css">
-    <script defer src="/scripts.js"></script>
+    <script src="/scripts.js"></script>
 </head>
 
 <body id="docBody" onload="setTheme()">
@@ -153,42 +153,69 @@
 
         <div class="service"></div>
 
-        <div class="service">
+        <div class="service" style="cursor:default;">
             <button onclick="window.location.href='/pages/services.html'">Read more</button>
+            <button onclick="window.location.href='/pages/contact.html'">Contact us</button>
         </div>
     </section>
 
-    <section class="swrap">
-        <h2>Welcome!</h2>
+    <section class="swrap" id="nessie-cage">
         <div class="horizontal">
             <div class="horizontal-text">
+                <h2>Welcome!</h2>
                 <p>
-                    We're BlueLoch Software Solutions, a software development company based in Glasgow,
+                    We are BlueLoch Software Solutions, a software development company based in Glasgow,
                     Scotland. Our mission is to help you get the high quality software you need for yourself and your
                     business.
                 </p>
             </div>
 
-            <img id="nessie" class="themeable" src="/resources/img/logos/Nessy-white.png">
+            <img id="nessie" style="clip-path: none;" class="themeable" src="/resources/img/logos/Nessy-white.png" onload="checkAbilities()" onclick="doAFlip()" style="z-index: 20;">
         </div>
 
     </section>
 
     <section class="swrap">
-        <h2>Who are we?</h2>
+        <h2>Why choose us?</h2>
         <div class="horizontal">
             <div class="horizontal-text">
                 <p>
-                    We are four uni students who share a passion for software development. Each of us has studied
+                    Picture this: someone needs some software for themselves or their business. They look at developing
+                    it themselves, perhaps with an online website builder or by following various tutorials online, but
+                    they just don't know where to start.<br><br>
+                    Instead, they approach a major corporation who says they can develop it. The corporation takes a
+                    long time to get anything done, they charge far too much, and the person feels like just another cog
+                    in the machine. When the software finally arrives it's a broken mess.<br><br>
+                    Maybe this sounds familiar? It's a story we've heard many times. At BlueLoch, developing the
+                    software is only half the job. The other half is all about you. We'll develop quickly, making sure
+                    we keep you in the loop at all times. As we work, if there's something you don't like, we'll fix it.
+                    And when the software is delivered, we'll have tested it thoroughly to ensure it works as smooth as
+                    possible.
+                </p>
+
+                <button onclick="window.location.href='/pages/devprocess.html'">Our development process</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="swrap">
+
+        <div class="horizontal">
+            <div class="horizontal-text">
+                <h2 style="text-align: left;">Who are we?</h2>
+                <p>
+                    BlueLoch is a group of four uni students who share a passion for software development. Each of us
+                    has studied
                     computing for most of our lives giving us a strong pool of experience
                     <br><br>
                     Having learned about the shortcomings of today's software industry, from old work methodologies to
                     outdated technology, we founded BlueLoch with the belief that we could do better.
                 </p>
-                <button>Read more</button>
+                <button onclick="window.location.href='/pages/about.html'">Read more</button>
             </div>
 
-            <img src="/resources/img/portraits/us.png">
+            <img id="portrait-collage" src="/resources/img/portraits/us.png">
         </div>
 
     </section>
@@ -196,14 +223,25 @@
 
 
     <footer>
-        <p>
-            BlueLoch Software Solutions Ltd. <br>
-            <a href="/pages/legal.html">Legal</a> | <a href="/pages/privacy/privacy_policy.html">Privacy</a> | <a
-                href="https://find-and-update.company-information.service.gov.uk/company/SC776047">SC776047</a><br>
-            Icons by <a target="_blank" href="https://icons8.com">Icons8</a> <br>
-            Copyright ©
-            <script>document.write(new Date().getFullYear())</script>
-        </p>
+        <div class="horizontal">
+            <div class="horizontal-text">
+                <p>
+                    BlueLoch Software Solutions Ltd.<br>
+                    Email: <a href="mailto:contact@blueloch.co.uk">contact@blueloch.co.uk</a><br>
+                    <a href="https://find-and-update.company-information.service.gov.uk/company/SC776047">Company: SC776047</a>
+                </p>
+            </div>
+            <div class="horizontal-text">
+                <p>
+                    <a href="/pages/legal.html">Legal</a> | <a href="/pages/privacy/privacy_policy.html">Privacy</a><br>
+                    Icons by <a target="_blank" href="https://icons8.com">Icons8</a><br>                    
+                    Copyright ©<script>document.write(new Date().getFullYear())</script>
+                </p>
+            </div>
+
+            
+        </div>
+        
     </footer>
 </body>
 
