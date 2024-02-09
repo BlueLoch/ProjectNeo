@@ -274,6 +274,7 @@ h1 {
     text-align: center;
     display: inline;
     transform: translateY(0.4rem);
+    right: 1.5rem;
 }
 
 .lightdarktog {
@@ -596,7 +597,7 @@ body:not(.darkmode) .service img {
 }
 
 /* Links */
-.swrap a,
+.swrap a:not(.no-underline),
 footer a,
 .img-popper {
     cursor: pointer;
@@ -606,7 +607,7 @@ footer a,
     text-decoration: none;
 }
 
-.swrap a::before,
+.swrap a:not(.no-underline)::before,
 footer a::before,
 .img-popper::before {
     content: '';
@@ -619,13 +620,13 @@ footer a::before,
     transition: transform 0.5s ease-in-out;
 }
 
-.swrap a:hover,
+.swrap a:not(.no-underline):hover,
 footer a:hover,
 .img-popper:hover {
     color: var(--col-blbluea);
 }
 
-.swrap a:hover::before,
+.swrap a:not(.no-underline):hover::before,
 footer a:hover::before,
 .img-popper:hover::before {
     transform: scaleX(1);
@@ -656,6 +657,13 @@ footer a:hover::before,
     max-width: 20rem;
     background-color: var(--backgroundsecondary);
     clip-path: polygon(0 40.00px, 40.00px 0, calc(100% - 40.00px) 0, 100% 40.00px, 100% calc(100% - 40.00px), calc(100% - 40.00px) 100%, 40.00px 100%, 0 calc(100% - 40.00px));
+}
+
+.horizontal .partner {
+    clip-path: none;
+    display: inline;
+    background-color: none;
+    cursor: pointer;
 }
 
 .horizontal-text p,
@@ -713,9 +721,50 @@ footer .horizontal-text p {
     transition: background-color 0.5s ease;
 }
 
+/* For links that dont need underlines (like images) */
+.no-underline {
+    max-width: 20rem;
+    min-width: 10rem;
+    transition: background-color 0.3s ease-in-out;
+    clip-path: polygon(0 20.00px,20.00px 0,calc(100% - 20.00px) 0,100% 20.00px,100% calc(100% - 20.00px),calc(100% - 20.00px) 100%,20.00px 100%,0 calc(100% - 20.00px));
+}
+
+.no-underline img {
+    padding: 1rem;
+}
+
+.no-underline:hover {
+    background-color: rgba(0, 94, 184, 0.2);
+}
+
+
 
 
 /* Scaling */
+@media only screen and (max-width: 1200px) {
+    .sidebar {
+        width: 18rem;
+    }
+
+    .sidebar-link-icon {
+        right: 0.5rem;
+    }
+
+    .sidebar-link-icon img,
+    .sidebar-link-icon svg {
+        width: 2rem;
+    }
+
+    .sidebar hr {
+        right: 0.5rem;
+        width: 2.1rem;
+    }
+
+    #ld-wrapper {
+        right: 0.6rem;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .header-content {
         padding: 2rem;

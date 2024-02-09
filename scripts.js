@@ -121,7 +121,7 @@ function checkCookies() {
 const pause = ms => new Promise(res => setTimeout(res, ms));
 
 function checkAbilities() {
-    if (document.getElementById('docBody').clientWidth > 800) {
+    if (document.getElementById('docBody').clientWidth > 1200) {
         document.getElementById('nessie').addEventListener('dblclick', goForSwim);
     }
 }
