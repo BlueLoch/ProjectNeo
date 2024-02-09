@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: Mono45Headline-Bold;
-    src: url(/resources/fonts/Mono45Headline-Bold.ttf);
+    font-family: Mono45Headline-Reg;
+    src: url(/resources/fonts/Mono45Headline-Light.ttf);
 }
 
 
@@ -55,6 +55,7 @@ body {
     background-size: 100px 100px;
     background-position: 0 0, 50px 50px;
     background-color: var(--col-bodyback);
+    background-attachment: fixed;
 }
 
 
@@ -101,6 +102,7 @@ h1 {
 
 .sidebar-link-icon {
     right: 1.3rem;
+    transform: translateY(-0.4rem);
     position: absolute;
 }
 
@@ -119,7 +121,7 @@ h1 {
 }
 
 #sidelogo-icon {
-    top: 3rem;
+    top: 3.4rem;
     transition: 0.5s;
 }
 
@@ -140,6 +142,18 @@ h1 {
     opacity: 0;
 }
 
+.sidebar hr {
+    position: absolute;
+    border-color: var(--col-text);
+    right: 1rem;
+    width: 3rem;
+    transition: all 0.3s ease-in-out, border-color 0.5s ease;
+}
+
+.sidebar:hover hr {
+    width: 18rem;
+}
+
 /* Hamburger Menu */
 .hamburger-wrapper {
     display: none;
@@ -154,7 +168,7 @@ h1 {
     width: 100px;
     height: 70px;
     background: var(--col-bodybackd);
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     box-shadow: 0 0 0 0 var(--col-bodybacks), 0 0 0 0 var(--col-bodybacks);
     cursor: pointer;
     border-radius: 1rem;
@@ -169,13 +183,13 @@ h1 {
     background: var(--col-blblue);
     display: block;
     transform-origin: center;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     border-radius: 1px;
 }
 
 .ham-label .hamburger:after,
 .ham-label .hamburger:before {
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     content: "";
     position: absolute;
     display: block;
@@ -307,44 +321,29 @@ header {
 
 .header-content:has(img) {
     padding: 4rem;
-    padding-bottom: 7rem;
+    padding-bottom: 6rem;
+}
+
+header:not(:has(.header-content img)) {
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 100px),calc(100% - 100px) 100%,100px 100%,0 calc(100% - 100px));
 }
 
 header img {
     margin: auto;
     max-height: 16rem;
     max-width: 100%;
-    animation: fade-in-logo 2s ease-in-out;
+    animation: fadein 2s ease-in-out;
     transition: clip-path 10s ease-in-out;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-@keyframes fade-in-logo {
-    0% {
-        opacity: 0;
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
-    }
-
-    30% {
-        opacity: 0;
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
-    }
-
-    70% {
-        opacity: 1;
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
-    }
 }
 
 header p {
+    font-family: Mono45Headline-Reg;
     margin: auto;
     max-width: 90%;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    font-size: 1.7rem;
     text-align: center;
-}
-
-header p b {
-    text-shadow: 1px 1px 1px #202020;
+    animation: fadein-del 3s ease-in-out;
 }
 
 
@@ -380,6 +379,7 @@ footer p {
     font-size: 1.8rem;
     transition: 0.1s;
     text-align: center;
+    clip-path: polygon(0 0,calc(100% - 40.00px) 0,100% 40.00px,100% 100%,0 100%);
 }
 
 .cookies:hover {
@@ -454,7 +454,7 @@ button::after {
     width: 90%;
     text-align: center;
     margin: auto;
-    margin-top: -3.8rem;
+    margin-top: -3.9rem;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -529,12 +529,10 @@ body:not(.darkmode) .service:nth-child(3) {
     font-size: 2rem;
     display: inline;
     white-space: nowrap;
-    animation: fadein-text 2s;
 }
 
 .service p {
     font-size: 1.3rem;
-    animation: fadein-text-del 3s ease-in-out;
 }
 
 .service img {
@@ -549,18 +547,22 @@ body:not(.darkmode) .service img {
     filter: brightness(6);
 }
 
-@keyframes fadein-text {
+@keyframes fadein {
     0% {
+        opacity: 0;
+    }
+
+    20% {
         opacity: 0;
     }
 }
 
-@keyframes fadein-text-del {
+@keyframes fadein-del {
     0% {
         opacity: 0;
     }
 
-    80% {
+    50% {
         opacity: 0;
     }
 }
@@ -720,6 +722,12 @@ footer .horizontal-text p {
         padding-bottom: 5rem;
     }
 
+    .header-content p {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+        text-shadow: none;
+    }
+
     .sidebar {
         display: none;
     }
@@ -737,6 +745,7 @@ footer .horizontal-text p {
         animation-delay: 0s;
         animation-duration: 3s;
         padding: 1rem;
+        clip-path: none;
     }
 
     .cookies p {

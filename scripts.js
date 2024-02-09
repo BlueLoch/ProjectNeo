@@ -1,12 +1,3 @@
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        sessionStorage.setItem('viewMode', 'light');
-    } else {
-        sessionStorage.setItem('viewMode', 'dark');
-    }
-    changeTheme();
-});
-
 function setTheme() {
     let mode = sessionStorage.getItem('viewMode');
 
