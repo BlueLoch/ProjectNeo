@@ -126,8 +126,6 @@ function checkCookies() {
     }
 }
 
-
-
 // Fun stuff for Nessie. I will protect this creature with my life
 const pause = ms => new Promise(res => setTimeout(res, ms));
 
