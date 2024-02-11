@@ -1,3 +1,9 @@
+function initPage() {
+    setTheme();
+    checkCookies();
+    fixFooter();
+}
+
 function setTheme() {
     let mode = sessionStorage.getItem('viewMode');
 
@@ -26,7 +32,6 @@ function setTheme() {
     }
 
     toggleThemeables();
-    checkCookies();
 }
 
 function changeTheme() {
@@ -61,6 +66,7 @@ function changeTheme() {
     toggleThemeables();
 }
 
+// changes light to dark mode and vice versa, changing all relevant elements as necessary
 function toggleTheme() {
     let mode = sessionStorage.getItem('viewMode');
 
@@ -93,6 +99,7 @@ function toggleTheme() {
     toggleThemeables();
 }
 
+// toggles all images that can be changed between light and dark mode
 function toggleThemeables() {
     let mode = sessionStorage.getItem('viewMode');
     let themeables = document.getElementsByClassName('themeable');
@@ -107,6 +114,8 @@ function toggleThemeables() {
     }
 }
 
+
+// checks if user has seen the cookie popup yet, and if so deletes it from the page
 function checkCookies() {
     let sess = sessionStorage.getItem('seenCookies');
 
@@ -116,6 +125,25 @@ function checkCookies() {
         sessionStorage.setItem('seenCookies', 'yes');
     }
 }
+
+// checks if the footer needs attached to the bottom of the page or not, and updates as necessary
+function fixFooter() {
+    let height = window.innerHeight;
+    let footer = document.getElementById('footer');
+    let footerPos = footer.getBoundingClientRect().bottom;
+
+    if (footerPos < height) {
+        footer.classList.add('sticky-footer');
+    }
+    else {
+        footer.classList.remove('sticky-footer');
+    }
+}
+
+
+
+
+
 
 // Fun stuff for Nessie. I will protect this creature with my life
 const pause = ms => new Promise(res => setTimeout(res, ms));

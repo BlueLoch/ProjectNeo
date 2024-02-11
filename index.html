@@ -24,11 +24,11 @@
 
     <!-- Resource Links -->
     <link rel="icon" href="/resources/img/logos/Nessy-blue.png" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <script src="/scripts.js"></script>
 </head>
 
-<body id="docBody" onload="setTheme()" >
+<body id="docBody" onload="initPage()" onresize="fixFooter()">
     <div class="sidebar">
         <img id="sidelogo" src="/resources/img/logos/Text-white.png">
         <span class="sidebar-link-icon" id="sidelogo-icon"><img id="sidelogo-icon-img"
@@ -48,7 +48,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/about.html">
+                <a href="/pages/about.html">
                     <span class="sidebar-link-title">About us</span>
                     <span class="sidebar-link-icon">
                         <?xml version="1.0"?>
@@ -60,7 +60,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/contact.html">
+                <a href="/pages/contact.html">
                     <span class="sidebar-link-title">Contact us</span>
                     <span class="sidebar-link-icon">
                         <?xml version="1.0"?>
@@ -72,7 +72,7 @@
                 </a>
             </li>
             <li>
-                <a href="pages/support/hub.html">
+                <a href="/pages/support/hub.html">
                     <span class="sidebar-link-title">Support</span>
                     <span class="sidebar-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
@@ -193,22 +193,6 @@
 
             <div class="horizontal-text">
                 <p>
-                    <!--
-                        Will use all this in about page:
-
-                        Picture this: someone needs some software for themselves or their business. They look at developing
-                        it themselves, perhaps with an online website builder or by following various tutorials online, but
-                        they just don't know where to start.<br><br>
-                        Instead, they approach a major corporation who says they can develop it. The corporation takes a
-                        long time to get anything done, they charge far too much, and the person feels like just another cog
-                        in the machine. When the software finally arrives it's a broken mess.<br><br>
-                        Maybe this sounds familiar? It's a story we've heard many times. At BlueLoch, developing the
-                        software is only half the job. The other half is all about you. We'll develop quickly, making sure
-                        we keep you in the loop at all times. As we work, if there's something you don't like, we'll fix it.
-                        And when the software is delivered, we'll have tested it thoroughly to ensure it works as smooth as
-                        possible.
-                    -->
-
                     We guarantee that all software we develop is built to the highest quality. As we work, we'll
                     thouroughly test yours to fix even the smallest bugs. Once we deliver the software, we'll fix
                     anything that isn't quite working right at no extra cost.
@@ -258,7 +242,7 @@
 
 
 
-    <footer>
+    <footer id="footer">
         <div class="horizontal">
             <div class="horizontal-text">
                 <p>

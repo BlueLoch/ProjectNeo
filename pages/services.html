@@ -28,7 +28,7 @@
     <script src="/scripts.js"></script>
 </head>
 
-<body id="docBody" onload="setTheme()">
+<body id="docBody" onload="initPage()" onresize="fixFooter()">
     <div class="sidebar">
         <img id="sidelogo" src="/resources/img/logos/Text-white.png">
         <span class="sidebar-link-icon" id="sidelogo-icon"><img id="sidelogo-icon-img"
@@ -89,7 +89,7 @@
                         <span class="lightdarktog" id="lightdarktog"></span>
                     </span>
                 </div>
-                
+
             </li>
         </ul>
     </div>
@@ -110,7 +110,7 @@
                         <span class="sidebar-link-icon" id="ld-wrapper">
                             <span class="lightdarktog" id="lightdarktog"></span>
                         </span>
-                    </div>                    
+                    </div>
                 </li>
             </ul>
         </label>
@@ -209,7 +209,7 @@
     </section>
 
 
-    <footer>
+    <footer id="footer">
         <div class="horizontal">
             <div class="horizontal-text">
                 <p>

@@ -59,7 +59,6 @@ body {
 }
 
 
-
 /* Standard Preferences */
 p {
     font-size: 1.4rem;
@@ -67,6 +66,8 @@ p {
 }
 
 h1 {
+    font-family: Mono45Headline-Reg;
+    letter-spacing: 0.5rem;
     color: var(--col-blblue);
     margin: auto;
     padding: none;
@@ -378,6 +379,10 @@ footer {
 footer p {
     font-size: 1rem;
     line-height: 1.2rem;
+}
+
+.sticky-footer {
+    position: absolute;
 }
 
 
@@ -860,6 +865,10 @@ footer .horizontal-text p {
         text-align: center;
         margin: 0;
         font-size: 2.5rem;
+    }
+
+    .swrap h3 {
+        margin-left: 0;
     }
 
     .service-grid {
