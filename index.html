@@ -82,11 +82,14 @@
                 </a>
             </li>
             <hr>
-            <li style="padding-top: 1rem;">
-                <span class="sidebar-link-title" style="padding: 1rem;">Dark / Light</span>
-                <span class="sidebar-link-icon" id="ld-wrapper">
-                    <span class="lightdarktog" id="lightdarktog" onclick="toggleTheme()"></span>
-                </span>
+            <li>
+                <div class="ld-line" onclick="toggleTheme()">
+                    <span class="sidebar-link-title" style="padding: 1rem;">Dark / Light</span>
+                    <span class="sidebar-link-icon" id="ld-wrapper">
+                        <span class="lightdarktog" id="lightdarktog"></span>
+                    </span>
+                </div>
+
             </li>
         </ul>
     </div>
@@ -100,12 +103,14 @@
                 <li><a href="/pages/about.html">About&nbsp;us</a></li>
                 <li><a href="/pages/contact.html">Contact&nbsp;us</a></li>
                 <li><a href="/pages/support/hub.html">Support</a></li>
-                <hr style="width: 15rem;">
-                <li style="text-align: left; padding: 1rem;">
-                    <span class="sidebar-link-title">Theme</span>
-                    <span class="sidebar-link-icon" id="ld-wrapper">
-                        <span class="lightdarktog" id="lightdarktog" onclick="toggleTheme()"></span>
-                    </span>
+                <hr style="width: 20rem;">
+                <li>
+                    <div style="text-align: left;" class="ld-line" onclick="toggleTheme()">
+                        <span style="padding-left: 1rem;" class="sidebar-link-title">Dark / Light</span>
+                        <span class="sidebar-link-icon" id="ld-wrapper">
+                            <span class="lightdarktog" id="lightdarktog"></span>
+                        </span>
+                    </div>
                 </li>
             </ul>
         </label>
@@ -119,7 +124,7 @@
     <header>
         <div class="header-content">
             <img id="welcome" class="themeable" src="/resources/img/logos/Text-white.png">
-            <p>Bespoke software for you and your business</p>
+            <p>Bespoke software for you or your business</p>
         </div>
     </header>
 
@@ -129,7 +134,7 @@
             <h3><img src="/resources/img/icons/websites.png">Websites</h3>
             <hr>
             <p>
-                Your dream website, or your company's web app, for all devices at all times of day!
+                Your dream website, or your company's web app, for all devices at all times of day
             </p>
         </div>
 
@@ -137,7 +142,7 @@
             <h3><img src="/resources/img/icons/apps.png">Apps</h3>
             <hr>
             <p>
-                Mobile and desktop apps tailored to your personal or business needs!
+                Mobile and desktop apps tailored to your personal or business needs
             </p>
         </div>
 
@@ -145,7 +150,7 @@
             <h3><img src="/resources/img/icons/maintenance.png">Maintenance</h3>
             <hr>
             <p>
-                Continuing support and maintenance for your software for as long as you need!
+                Continuing support and maintenance for your software for as long as you need
             </p>
         </div>
 
@@ -163,20 +168,29 @@
                 <h2>Welcome!</h2>
                 <p>
                     We are BlueLoch Software Solutions, a software development company based in Glasgow,
-                    Scotland. Our mission is to help you get the high quality software you need for yourself and your
-                    business.
+                    Scotland. Our mission is to help you get the high quality software you need, for yourself or your
+                    business, efficiently and at a good price.
                 </p>
             </div>
-
+            
             <img id="nessie" style="clip-path: none;" class="themeable" src="/resources/img/logos/Nessy-white.png"
-                onload="checkAbilities()" onclick="doAFlip()" style="z-index: 20;">
-        </div>
+                onload="checkAbilities()" onclick="doAFlip()" title="Hi! I'm Nessie! Click or double-click me!">
 
+        </div>
     </section>
 
     <section class="swrap">
         <h2>Why choose us?</h2>
         <div class="horizontal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 190">
+                <path d="M 0 0 L 140 0 L 180 25 L 140 50 L 0 50 L 40 25 Z" fill="#004a8f" />
+                <path d="M 100 70 L 240 70 L 280 95 L 240 120 L 100 120 L 140 95 Z" fill="#0056a7" />
+                <path d="M 200 140 L 340 140 L 380 165 L 340 190 L 200 190 L 240 165 Z" fill="#005EB8" />
+                <text x="55" y="32" fill="#DADEE6" font-size="1.5rem" style="font-family: Metropolis;">Design</text>
+                <text x="155" y="102" fill="#DADEE6" font-size="1.5rem" style="font-family: Metropolis;">Develop</text>
+                <text x="270" y="172" fill="#DADEE6" font-size="1.5rem" style="font-family: Metropolis;">Test</text>
+            </svg>
+
             <div class="horizontal-text">
                 <p>
                     <!--
@@ -195,24 +209,23 @@
                         possible.
                     -->
 
-                    At BlueLoch, developing the software is only half the job. The other half is all about you. We'll
-                    develop quickly, making sure we keep you in the loop at all times. As we work, if there's something
-                    you don't like, we'll fix it. And when the software is delivered, we'll have tested it thoroughly to
-                    ensure it works as smooth as possible. If something slipped through the net, we'll fix it for you at
-                    no extra cost no matter how big or small.
-
+                    We guarantee that all software we develop is built to the highest quality. As we work, we'll
+                    thouroughly test yours to fix even the smallest bugs. Once we deliver the software, we'll fix
+                    anything that isn't quite working right at no extra cost.
+                    <br><br>
+                    But developing the software is only half the job at BlueLoch. The other half is all about you. We'll
+                    develop quickly so we don't keep you waiting, making sure we keep you in the loop at all times. If
+                    you change your mind about something, we'll fix it.
                 </p>
 
                 <button onclick="window.location.href='/pages/devprocess.html'">Our development process</button>
             </div>
+
         </div>
-
-
-
     </section>
 
     <section class="swrap">
-        <h2>Trusted</h2>
+        <h2>Trusted by big names</h2>
         <p>
             We aren't just a little company. We're trusted by businesses all over the world!
         </p>

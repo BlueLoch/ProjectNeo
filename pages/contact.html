@@ -82,11 +82,14 @@
                 </a>
             </li>
             <hr>
-            <li style="padding-top: 1rem;">
-                <span class="sidebar-link-title" style="padding: 1rem;">Dark / Light</span>
-                <span class="sidebar-link-icon" style="right: 1.5rem;" id="ld-wrapper">
-                    <span class="lightdarktog" id="lightdarktog" onclick="toggleTheme()"></span>
-                </span>
+            <li>
+                <div class="ld-line" onclick="toggleTheme()">
+                    <span class="sidebar-link-title" style="padding: 1rem;">Dark / Light</span>
+                    <span class="sidebar-link-icon" id="ld-wrapper">
+                        <span class="lightdarktog" id="lightdarktog"></span>
+                    </span>
+                </div>
+                
             </li>
         </ul>
     </div>
@@ -100,12 +103,14 @@
                 <li><a href="/pages/about.html">About&nbsp;us</a></li>
                 <li><a href="/pages/contact.html">Contact&nbsp;us</a></li>
                 <li><a href="/pages/support/hub.html">Support</a></li>
-                <hr style="width: 15rem;">
-                <li style="text-align: left; padding: 1rem;">
-                    <span class="sidebar-link-title">Theme</span>
-                    <span class="sidebar-link-icon" id="ld-wrapper">
-                        <span class="lightdarktog" id="lightdarktog" onclick="toggleTheme()"></span>
-                    </span>
+                <hr style="width: 20rem;">
+                <li>
+                    <div style="text-align: left;" class="ld-line" onclick="toggleTheme()">
+                        <span style="padding-left: 1rem;" class="sidebar-link-title">Dark / Light</span>
+                        <span class="sidebar-link-icon" id="ld-wrapper">
+                            <span class="lightdarktog" id="lightdarktog"></span>
+                        </span>
+                    </div>                    
                 </li>
             </ul>
         </label>
