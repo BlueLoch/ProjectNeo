@@ -801,6 +801,7 @@ footer .horizontal-text p {
 
     #ld-wrapper {
         right: 0.6rem;
+        transform: translateY(0.2rem);
     }
 }
 
