@@ -782,22 +782,24 @@ footer .horizontal-text p {
 
 /* Folding Cards for About Us */
 .card {
-    position: relative;
+    max-width: 20rem;
 }
 
 .card .facef, .card .faceb {
     width: 20rem;
-    height: 20rem;
     transition: 0.5s;
 }
 
 .card .facef {
     position: relative;
+    flex: 1;
     background-color: var(--col-bodybackd);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;    
+    z-index: 2;  
+    height: 20rem;  
+    transform: translateY(5rem);
 }
 
 .facef .card-content {
@@ -810,22 +812,33 @@ footer .horizontal-text p {
     color: var(--col-text);
     width: fit-content;
     margin: auto;
-    transform: translateY(16rem);
+    transform: translateY(18rem);
     background: var(--col-bodyback);
     padding: 1rem;
+    width: 15rem;
+    clip-path: polygon(0 2.00rem,2.00rem 0,calc(100% - 2.00rem) 0,100% 2.00rem,100% calc(100% - 2.00rem),calc(100% - 2.00rem) 100%,2.00rem 100%,0 calc(100% - 2.00rem));
 }
 
 .card .faceb {
-    position: relative;
     background-color: var(--col-bodyback);
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    box-sizing: border-box;
-    box-shadow: 0 10px 10px rgba(0, 94, 184, 0.5);
     z-index: 1;
-    transform: translateY(-20rem);
+    height: 16rem;
+    transform: translateY(-10rem);
+    opacity: 0;
+}
+
+.card:hover .facef {
+    transform: translateY(0);
+}
+
+.card:hover .faceb {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 
@@ -978,13 +991,16 @@ footer .horizontal-text p {
         padding-top: 2rem;
     }
 
-
     #portrait-collage {
         max-width: 80%;
     }
 
     #ld-wrapper {
         transform: translateX(-0.5rem) translateY(0.1rem);
+    }
+
+    .facef h3 {
+        margin: auto;
     }
 }
 
