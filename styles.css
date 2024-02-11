@@ -725,7 +725,7 @@ footer .horizontal-text p {
 }
 
 .horizontal .lonely-title {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 /* Nessie */
@@ -780,6 +780,53 @@ footer .horizontal-text p {
     background-color: rgba(0, 94, 184, 0.2);
 }
 
+/* Folding Cards for About Us */
+.card {
+    position: relative;
+}
+
+.card .facef, .card .faceb {
+    width: 20rem;
+    height: 20rem;
+    transition: 0.5s;
+}
+
+.card .facef {
+    position: relative;
+    background-color: var(--col-bodybackd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;    
+}
+
+.facef .card-content {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20rem;
+}
+
+.facef h3 {
+    color: var(--col-text);
+    width: fit-content;
+    margin: auto;
+    transform: translateY(16rem);
+    background: var(--col-bodyback);
+    padding: 1rem;
+}
+
+.card .faceb {
+    position: relative;
+    background-color: var(--col-bodyback);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgba(0, 94, 184, 0.5);
+    z-index: 1;
+    transform: translateY(-20rem);
+}
 
 
 /* Scaling */
