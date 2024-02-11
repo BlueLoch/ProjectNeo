@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: Metropolis-Bold;
+    src: url(/resources/fonts/Metropolis-Medium.otf);
+}
+
+@font-face {
     font-family: Mono45Headline-Reg;
     src: url(/resources/fonts/Mono45Headline-Light.ttf);
 }
@@ -560,7 +565,7 @@ body:not(.darkmode) .service:nth-child(3) {
 .service img {
     height: 2rem;
     display: inline;
-    transform: translateY(0.4rem);
+    vertical-align: middle;
     margin-right: 0.5rem;
     transition: filter 0.5s ease
 }
@@ -612,10 +617,13 @@ body:not(.darkmode) .service img {
     color: var(--col-blblue);
 }
 
+
+
 .swrap h3 {
     font-size: 2rem;
     margin: 1rem 0 -1rem -1rem;
 }
+
 
 /* Links */
 .swrap a:not(.no-underline),
@@ -716,6 +724,9 @@ footer .horizontal-text p {
     text-align: center;
 }
 
+.horizontal .lonely-title {
+    font-size: 5rem;
+}
 
 /* Nessie */
 #nessie {
@@ -777,6 +788,10 @@ footer .horizontal-text p {
         padding-top: 2rem;
         padding-inline: 1rem;
     }
+    
+    .horizontal .lonely-title {
+        font-size: 3rem;
+    }
 
     .sidebar {
         width: 18rem;
@@ -811,6 +826,10 @@ footer .horizontal-text p {
 }
 
 @media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
     .header-content {
         padding: 2rem;
         padding-bottom: 5rem;
@@ -818,7 +837,6 @@ footer .horizontal-text p {
 
     button {
         padding-inline: 1rem;
-        padding-block: 0;
     }
 
     .header-content p {
@@ -878,7 +896,17 @@ footer .horizontal-text p {
 
     .service {
         min-width: none;
-        padding: 2rem;
+        padding-block: 2rem;
+        padding-inline: 1rem;
+    }
+
+    .service h3 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .service img {
+        height: 1.5rem;
     }
 
     .service:nth-child(1),
@@ -902,6 +930,7 @@ footer .horizontal-text p {
     .horizontal svg {
         padding-top: 2rem;
     }
+
 
     #portrait-collage {
         max-width: 80%;
