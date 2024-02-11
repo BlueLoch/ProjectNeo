@@ -79,6 +79,8 @@ h1 {
     width: fit-content;
 }
 
+
+
 /* Nav Menu */
 .sidebar {
     position: fixed;
@@ -841,6 +843,14 @@ footer .horizontal-text p {
     opacity: 1;
 }
 
+.tempwarn {
+    margin-top: 20vh;
+}
+
+.tempwarn {
+    text-align: center;
+}
+
 
 /* Scaling */
 @media only screen and (max-width: 1200px) {
@@ -936,7 +946,7 @@ footer .horizontal-text p {
 
     .swrap p {
         padding: 1rem;
-        text-align: justify;
+        text-align: left;
     }
 
     .swrap h2 {
