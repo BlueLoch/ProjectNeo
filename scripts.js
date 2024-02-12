@@ -2,6 +2,7 @@ function initPage() {
     setTheme();
     checkCookies();
     fixFooter();
+    checkAnims();
 }
 
 function setTheme() {
@@ -140,7 +141,16 @@ function fixFooter() {
     }
 }
 
+function checkAnims() {
+    let showAnims = window.matchMedia(`(prefers-reduced-motion: no-preference)`) === true;
 
+    if (!showAnims) {
+        let animatedEls = document.getElementsByClassName('mover');
+        for (let i = 0; i < animatedEls.length; i++) {
+            animatedEls[i].classList.remove('slideleft');
+        }
+    }
+}
 
 
 
