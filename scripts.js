@@ -123,6 +123,7 @@ function checkCookies() {
     if (sess == "yes") {
         document.getElementById('cookie-pop').remove();
     } else {
+        alert("This site is currently experimental!");
         sessionStorage.setItem('seenCookies', 'yes');
     }
 }
@@ -133,7 +134,7 @@ function fixFooter() {
     let footer = document.getElementById('footer');
     let footerPos = footer.getBoundingClientRect().bottom;
 
-    if (footerPos < height) {
+    if ((footerPos + 1) < height) {
         footer.classList.add('sticky-footer');
     }
     else {
