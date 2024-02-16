@@ -831,10 +831,9 @@ footer .horizontal-text p {
     color: var(--col-text);
     width: fit-content;
     margin: auto;
-    transform: translateY(15.1rem);
+    transform: translateY(15rem);
     background: var(--col-bodyback);
     padding: 0.5rem;
-    padding-bottom: 0.6rem;
     width: 100%;
     clip-path: polygon(0 1rem, 1rem 0, calc(100% - 1rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 1rem 100%, 0 calc(100% - 1rem));
 }
