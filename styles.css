@@ -832,6 +832,7 @@ footer .horizontal-text p {
     width: fit-content;
     margin: auto;
     transform: translateY(15rem);
+    transition: color 0.5s, background-color 0.5s;
     background: var(--col-bodyback);
     padding: 0.5rem;
     width: 100%;
