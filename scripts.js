@@ -123,7 +123,6 @@ function checkCookies() {
     if (sess == "yes") {
         document.getElementById('cookie-pop').remove();
     } else {
-        alert("This site is currently experimental!");
         sessionStorage.setItem('seenCookies', 'yes');
     }
 }
