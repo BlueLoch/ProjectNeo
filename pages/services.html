@@ -25,24 +25,9 @@
     <!-- Resource Links -->
     <link rel="icon" href="/resources/images/logos/Nessy-blue.png" />
     <link rel="stylesheet" href="/styles.css">
-
-    <script>
-        function fixFooter() {
-            let height = window.innerHeight;
-            let footer = document.getElementsByTagName('footer')[0];
-            let footerPos = footer.getBoundingClientRect().bottom;
-
-            if ((footerPos + 1) < height) {
-                footer.classList.add('sticky-footer');
-            }
-            else {
-                footer.classList.remove('sticky-footer');
-            }
-        }
-    </script>
 </head>
 
-<body onload="fixFooter()" id="docbod">
+<body id="docbod">
     <nav id="nav">
         <a class="nav-logo" href="/index.html">
             <img src="/resources/images/logos/Banner-white.png">
@@ -50,7 +35,7 @@
 
         <a class="nav-link" href="/index.html">Home</a>
         <a class="nav-link" href="/pages/about.html">About</a>
-        <a class="nav-link" href="/pages/services.html">Services</a>
+        <a class="nav-link nav-link-active" href="/pages/services.html">Services</a>
 
         <a class="nav-contact link-btn" href="/pages/contact.html">Contact&nbsp;us</a>
     </nav>
@@ -70,33 +55,86 @@
     </div>
 
     <div id="content">
-        <section class="s-transparent">
-            <div class="s-content">
-                <h2>Contact Us</h2>
+        <section class="s-grey">
+            <div class="s-content ">
+                <h2>Services</h2>
                 <p>
-                    We have a number of ways you can get in contact with us.
+                    BlueLoch's services are not just limited to software development. We additionally offer software
+                    management and
+                    maintenance services to help you keep things running smoothly.
                 </p>
+            </div>
+        </section>
+
+        <section class="s-transparent" id="dev">
+            <div class="s-content">
+                <h2>Software Development</h2>
 
                 <div class="value-card-holder">
                     <div class="value-card">
-                        <h3>Email</h3>
-                        <p>contact@blueloch.co.uk</p>
-                        <a href="mailto:contact@blueloch.co.uk">
-                            <img class="no-anim small-img" src="/resources/images/svgs/email.svg">
-                        </a>                        
+                        <img src="/resources/images/svgs/software.svg">
+                        <h3>Websites</h3>
+                        <p>
+                            From a place to show off your business, to a sprawling site filled with articles and
+                            information. All of this available at anytime, anywhere through your web browser.
+                        </p>
                     </div>
 
                     <div class="value-card">
-                        <h3>Instagram</h3>
-                        <p>@bluelochsoftware</p>
-                        <a
-                            href="https://www.instagram.com/bluelochsoftware?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                            <img class="no-anim small-img" src="/resources/images/svgs/instagram.svg">
-                        </a>                        
+                        <img src="/resources/images/svgs/phone.svg">
+                        <h3>Apps</h3>
+                        <p>
+                            Available with a tap of a button, your software available at all times directly on your
+                            device!
+                        </p>
                     </div>
 
-
+                    <div class="value-card">
+                        <img src="/resources/images/svgs/cloud.svg">
+                        <h3>Hybrids</h3>
+                        <p>
+                            Hybrid software combines the best of both websites and apps: accessed anytime, anywhere, all
+                            with the tap of a button on your device.
+                        </p>
+                    </div>
                 </div>
+
+                <br>
+                <p>
+                    Have something else in mind we don't have listed? <a href="/pages/contact.html">Contact us</a> today
+                    and we'll let you know how we can help!
+                </p>
+            </div>
+        </section>
+
+        <section class="s-white" id="maintenance">
+            <div class="s-content">
+                <h2>Maintenance and Management</h2>
+                <div class="horizontal">
+                    <div class="horizontal-text">
+                        <p>
+                            Offered with all our development packages, we'll be happy to continue working with you to
+                            keep your software up and running for as long as you need. That includes handling your
+                            website's domain, fixing bugs, and making it easier if you want to make changes to your
+                            software in the future.
+                        </p>
+                    </div>
+
+                    <img class="small-img" src="/resources/images/svgs/maintenance.svg">
+                </div>
+            </div>
+        </section>
+
+        <section class="s-lgrey">
+            <div class="s-content">
+                <h2>Pricing</h2>
+                <p>
+                    Every piece of software is extremely different. For that reason, we are unfortunately unable to show
+                    any prices here. However, get in contact with us today, let us know what you need, and we'll be more
+                    than happy to give you a quote!
+                    <br><br>
+                    <a class="link-btn" href="/pages/contact.html">Get a quote</a>
+                </p>
             </div>
         </section>
 
