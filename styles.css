@@ -356,7 +356,8 @@ section p {
     background-color: hsl(206, 15%, 20%);
 }
 
-.s-grey p, .s-blue p {
+.s-grey p,
+.s-blue p {
     color: var(--blback);
 }
 
@@ -410,7 +411,8 @@ section p {
     max-width: 18%;
 }
 
-.link-btn, .link-btn-dark {
+.link-btn,
+.link-btn-dark {
     font-size: 1.5rem;
     text-decoration: none;
     padding: 0.8rem 2rem;
@@ -606,13 +608,11 @@ footer .horizontal-text p {
     width: 50%;
 }
 
-.value-card a img
-{
+.value-card a img {
     transition: transform 0.3s ease-in-out;
 }
 
-.value-card a img:hover
-{
+.value-card a img:hover {
     transform: scale(1.1);
 }
 
@@ -654,6 +654,24 @@ footer .horizontal-text p {
     .index-banner .scroller-wrapper .scroller .scroller-item .item-holder {
         width: 80%;
     }
+
+    .value-card {
+        width: 100%;
+    }
+
+    .value-card img {
+        width: 50%;
+        min-width: 12rem;
+    }
+
+    .s-content {
+        width: 90%;
+    }
+
+    .horizontal-text h2,
+    .horizontal-text h3 {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -671,11 +689,25 @@ footer .horizontal-text p {
         margin-top: 3rem;
     }
 
-    .index-banner {
-        display: none;
-    }
-
     .toosmall {
         display: block;
+    }
+
+    .index-banner img {
+        transform: translateY(50%);
+    }
+
+    .index-banner .scroller-wrapper .scroller .scroller-item .item-holder {
+        width: 95%;
+        padding: 1rem 2rem;
+    }
+
+    .index-banner .link-btn {
+        padding: 0.5rem 1.3rem;
+    }
+
+    .index-banner .scroller-wrapper h2 {
+        font-size: 2rem;
+        text-decoration: underline 2px;
     }
 }
