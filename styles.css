@@ -406,6 +406,7 @@ section p {
     position: relative;
     max-width: 20rem;
     height: auto;
+    min-height: 0rem;
 }
 
 .horizontal-text p,
