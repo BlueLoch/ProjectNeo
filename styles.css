@@ -206,6 +206,11 @@ nav .nav-link.nav-link-active:hover {
     margin: 1rem;
 }
 
+.hamburger-wrapper .ham-footer a {
+    font-size: 1.2rem;
+    color: var(--blback2);
+}
+
 /* HOME PAGE*/
 .index-banner {
     position: relative;
@@ -408,7 +413,7 @@ section p {
 }
 
 .horizontal img.small-img {
-    max-width: 18%;
+    max-width: 15rem;
 }
 
 .link-btn,
@@ -453,6 +458,7 @@ footer {
     width: 100%;
     color: var(--blback);
     border-top: solid var(--blblue2) 2px;
+    display: block;
 }
 
 footer p {
@@ -505,6 +511,14 @@ footer .horizontal-text {
 
 footer .horizontal-text p {
     text-align: center;
+}
+
+.s-lgrey .s-content .link-btn {
+    background-color: rgb(0, 94, 184, 0.7);
+}
+
+.s-lgrey .s-content .link-btn:hover {
+    background-color: rgb(0, 94, 184, 1);
 }
 
 /* FLIP CARDS */
@@ -669,7 +683,8 @@ footer .horizontal-text p {
     }
 
     .horizontal-text h2,
-    .horizontal-text h3 {
+    .horizontal-text h3,
+    .horizontal-text p {
         text-align: center;
     }
 }
@@ -679,16 +694,16 @@ footer .horizontal-text p {
         display: block;
     }
 
+    footer {
+        display: none;
+    }
+
     nav {
         display: none;
     }
 }
 
-@media only screen and (max-width: 500px) {
-    #content {
-        margin-top: 3rem;
-    }
-
+@media only screen and (max-width: 550px) {
     .toosmall {
         display: block;
     }
@@ -709,5 +724,14 @@ footer .horizontal-text p {
     .index-banner .scroller-wrapper h2 {
         font-size: 2rem;
         text-decoration: underline 2px;
+    }
+
+    .horizontal-text p {
+        text-align: center;
+    }
+
+    .horizontal img,
+    .horiztontal svg {
+        max-width: 15rem;
     }
 }

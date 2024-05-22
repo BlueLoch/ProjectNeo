@@ -25,9 +25,18 @@
     <!-- Resource Links -->
     <link rel="icon" href="/resources/images/logos/Nessy-blue.png" />
     <link rel="stylesheet" href="/styles.css">
+
+    <script>
+        function fixBanner() {
+            var container = document.getElementById("banner");
+            var content = container.innerHTML;
+            container.innerHTML= content; 
+            console.log("Refreshed"); 
+        }
+    </script>
 </head>
 
-<body id="docbod">
+<body id="docbod" onresize="fixBanner()">
     <nav id="nav">
         <a class="nav-logo" href="/index.html">
             <img src="/resources/images/logos/Banner-white.png">
@@ -55,7 +64,7 @@
     </div>
 
 
-    <div class="index-banner">
+    <div class="index-banner" id="banner">
         <img src="/resources/images/logos/Banner-white.png" alt="BlueLoch Software Solutions">
 
         <div class="scroller-wrapper">
