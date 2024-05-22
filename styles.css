@@ -665,25 +665,26 @@ footer .horizontal-text p {
     width: 100%;
 }
 
-
-
-@media only screen and (max-width: 1200px) {
-    .index-banner .scroller-wrapper .scroller .scroller-item .item-holder {
-        width: 80%;
-    }
-
+@media only screen and (max-width: 1400px) {
     .value-card {
         width: 100%;
     }
 
     .value-card img {
         width: 50%;
-        min-width: 12rem;
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .index-banner .scroller-wrapper .scroller .scroller-item .item-holder {
+        width: 80%;
     }
 
     .s-content {
         width: 90%;
     }
+    
 
     .horizontal-text h2,
     .horizontal-text h3,
@@ -703,6 +704,11 @@ footer .horizontal-text p {
 
     nav {
         display: none;
+    }
+
+    .value-card img {
+        width: 50%;
+        max-width: 13rem;
     }
 }
 
