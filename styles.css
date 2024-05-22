@@ -687,8 +687,7 @@ footer .horizontal-text p {
     
 
     .horizontal-text h2,
-    .horizontal-text h3,
-    .horizontal-text p {
+    .horizontal-text h3 {
         text-align: center;
     }
 }
@@ -709,6 +708,10 @@ footer .horizontal-text p {
     .value-card img {
         width: 50%;
         max-width: 13rem;
+    }
+
+    .horizontal-text p {
+        text-align: center;
     }
 }
 
